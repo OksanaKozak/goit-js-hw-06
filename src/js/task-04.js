@@ -1,0 +1,1 @@
+lrt counterValue = 0;
