@@ -6,13 +6,20 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-const fragment = document.createDocumentFragment();
-ingredients.forEach(ingredient => {
+
+const ulEl = document.querySelector('ul#ingredients');
+
+const ingredientsArr = ingredients.map(ingredient => {
   const liEl = document.createElement('li');
   liEl.textContent = ingredient;
-  liEl.className = 'item';
-  fragment.appendChild(liEl);
+  liEl.classList.add ('item');
+ 
+  return liEl;
+ 
 });
-document.body.appendChild(fragment);
+ulEl.append(...ingredientsArr);
+
+console.log(ulEl);
+
 
 
